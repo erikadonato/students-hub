@@ -36,11 +36,11 @@ O front estará rodando em http://localhost:3000.
    ```bash
    $ cd frontend
    $ docker build -t nome_do_container_front .
-   $ docker run nome_do_container_front 
+   $ docker run -p 3000:3000 nome_do_container_front 
    $ cd .. 
    $ cd backend
    $ docker build -t nome_do_container_back .
-   $ docker run nome_do_container_back 
+   $ docker run -p 3001:3001 nome_do_container_back 
 
 A api estará rodando em http://localhost:3001.
 O front estará rodando em http://localhost:3000.
