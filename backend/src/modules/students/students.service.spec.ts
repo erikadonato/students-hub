@@ -71,6 +71,22 @@ describe('StudentsService', () => {
       });
     });
 
+    it('should return all students', async () => {
+      repository.find.mockResolvedValue([studentWithId]);
+
+      const result = await service.searchStudentByParams({
+        nome: undefined,
+        email: undefined,
+        cpf: undefined,
+        id: undefined,
+      });
+      expect(result).toEqual({
+        statusCode: 200,
+        message: 'Success listing all students',
+        data: [studentWithId],
+      });
+    });
+
     it('should throw a NotFoundException if student is not found', async () => {
       const params = { nome: randomName };
 

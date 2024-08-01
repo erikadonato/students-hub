@@ -20,7 +20,7 @@ export class StudentsService {
   async searchStudentByParams(params: SearchStudentDto) {
     const validParams = this.checkValidParams(params);
 
-    if (!validParams) {
+    if (Object.keys(validParams).length === 0) {
       const results = await this.repository.find();
       return {
         statusCode: 200,
