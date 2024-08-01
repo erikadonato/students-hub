@@ -29,9 +29,6 @@ A configuração do banco de dados está no arquivo students-hub/backend/databas
    ```bash
    $ yarn start
 
-A api estará rodando em http://localhost:3001.
-O front estará rodando em http://localhost:3000.
-
 - Se preferir, ambos tem dockerfile: 
    ```bash
    $ cd frontend
